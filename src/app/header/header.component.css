@@ -1,0 +1,65 @@
+.example-icon {
+  padding: 0 14px;
+}
+.lien{
+   cursor: pointer;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-radio-group {
+  display: block;
+  border: 1px solid #555;
+  margin: 20px;
+  padding: 10px;
+}
+.toolbar-spacer{
+  flex: 1 1 auto;
+}
+.toolbar-spacer1{
+  margin-right: 20px;
+}
+#sidenavContainer{
+  margin-top: 64px;
+}
+#sidenav{
+  width: 240px;
+}
+#sidenav.menu-close{
+  width: 70px;
+}
+#sidenav.menu-open{
+  width: 240px;
+}
+#sidenav .avatar{
+  background-image: url("https://i.pravatar.cc");
+  background-size: cover;
+}
+
+#sidenav .mat-list-item-content{
+  padding: 0;
+}
+/*#sidenav .menu-item {
+  width: 100%;
+  border-radius: 0;
+  text-align: left;
+  padding: 5px;
+}*/
+#sidenav .menu-item :hover{
+  background: #555555;
+}
+.icon{
+  margin-right: 20px;
+  margin-left: 12px;
+}
+.dash-list h3 {
+  padding: 12px;
+}

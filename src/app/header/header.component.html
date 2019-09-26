@@ -1,0 +1,87 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon (click)="onTollbarMenuToggle()" class="toolbar-spacer1 lien"> menu</mat-icon>
+    <span class="toolbar-spacer"> Custom Toolbar</span>
+    <mat-icon class="toolbar-icon" matBadge="8" matBadgePosition="above after" matBadgeColor="accent">
+      notifications</mat-icon>
+  </mat-toolbar-row>
+<!--  <mat-toolbar-row></mat-toolbar-row>-->
+</mat-toolbar>
+
+
+<mat-sidenav-container fullscreen id="sidenavContainer">
+  <mat-sidenav mode="side" id="sidenav"
+               [class.menu-open]="isMenuOpen"
+               [class.menu-close]="!isMenuOpen"
+               opened position="start" role="navigation">
+
+    <mat-list>
+      <mat-card>
+        <mat-card-header>
+          <div mat-card-avatar class="avatar"> </div>
+          <mat-card-title> Abdelkader Yahyaoui</mat-card-title>
+          <mat-card-subtitle> Internel </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+
+      <mat-nav-list>
+          <mat-list-item [routerLink]="nav.url1" *ngFor="let nav of navBar">
+                 <mat-icon class="icon">{{nav.icon}}</mat-icon>
+                 {{nav.linkName}}
+          </mat-list-item>
+      </mat-nav-list>
+    </mat-list>
+<!--<mat-list>
+          <mat-card>
+              <mat-card-header>
+                <div mat-card-avatar class="avatar"> </div>
+                <mat-card-title> Abdelkader Yahyaoui</mat-card-title>
+                <mat-card-subtitle> Internel </mat-card-subtitle>
+              </mat-card-header>
+            </mat-card>
+              <mat-list-item [routerLink] ="['home']">
+              <button  class="menu-item" mat-flat-button>
+                <mat-icon> home </mat-icon>ACCEUIL
+              </button>
+              </mat-list-item>
+             <mat-list-item  [routerLink]="['experiences']">
+              <button class="menu-item" mat-flat-button>
+                <mat-icon> work </mat-icon>EXPERIENCES
+              </button>
+             </mat-list-item>
+            <mat-list-item [routerLink]="['formations']">
+            <button   class="menu-item" mat-flat-button>
+              <mat-icon> school </mat-icon>FORMATIONS
+            </button>
+            </mat-list-item>
+            <mat-list-item [routerLink]="['loisirs']" >
+              <button  class="menu-item"  mat-flat-button>
+                <mat-icon> near_me </mat-icon>LOISIRS
+              </button>
+            </mat-list-item>
+            <mat-list-item [routerLink]="['contacts']">
+              <button   class="menu-item" mat-flat-button>
+                <mat-icon> contacts</mat-icon>CONTACTEZ-MOI
+              </button>
+            </mat-list-item>
+           <mat-list-item >
+              <button class="menu-item" mat-flat-button>
+                <mat-icon> settings_application</mat-icon>Settings
+              </button>
+           </mat-list-item>
+          </mat-list>-->
+  </mat-sidenav>
+
+  <mat-sidenav-content [ngStyle]="{'margin-left.px':contentMargin}">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!--  <mat-selection-list class="dash-list">
+    <h3>To do </h3>
+    <mat-list-option *ngFor="let todo of task">
+       {{todo}}
+    </mat-list-option>
+  </mat-selection-list>-->
